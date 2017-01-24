@@ -1,14 +1,6 @@
 defmodule MbtaDeparturesBoard.DeparturesView do
   use MbtaDeparturesBoard.Web, :view
 
-  # Import convenience functions from controllers
-  import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1,
-                                        action_name: 1, controller_module: 1]
-
-  def handler_info(conn) do
-    "Request Handled By: #{controller_module conn}.#{action_name conn}"
-  end
-
   # Takes the comma-seperated string that is a row on the board and extract the data we want from it.
   def get_data(data, field) do
     data = List.to_tuple(data)

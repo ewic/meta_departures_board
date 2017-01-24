@@ -16,7 +16,7 @@ defmodule MbtaDeparturesBoard.Router do
   scope "/", MbtaDeparturesBoard do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", DeparturesController, :index
     get "/departures", DeparturesController, :index
   end
 

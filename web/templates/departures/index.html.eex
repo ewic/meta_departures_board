@@ -1,6 +1,5 @@
-<% handler_info @conn %>
-
 <div class="jumbotron">
+  <h3>Departures Board</h3>
   <table class="table table-striped">
     <tr>
       <th>Origin</th>
