@@ -1,0 +1,28 @@
+<% handler_info @conn %>
+
+<div class="jumbotron">
+  <table class="table table-striped">
+    <tr>
+      <th>Origin</th>
+      <th>Trip</th>
+      <th>Destination</th>
+      <th>Scheduled Time</th>
+      <th>Lateness</th>
+      <th>Track</th>
+      <th>Status</th>
+    </tr>
+
+    <%= for row <- @conn.assigns.data do %>
+      <tr>
+        <td><%= get_data(row, "origin") %></td>
+        <td><%= get_data(row, "trip") %></td>
+        <td><%= get_data(row, "destination") %></td>
+        <td><%= get_data(row, "scheduled_time") %></td>
+        <td><%= get_data(row, "lateness") %></td>
+        <td><%= get_data(row, "track") %></td>
+        <td><%= get_data(row, "status") %></td>
+      </tr>
+    <% end %>
+
+  </table>
+</div>
